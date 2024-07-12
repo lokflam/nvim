@@ -1,5 +1,6 @@
 return {
   "echasnovski/mini.icons",
+  event = "VeryLazy",
   specs = {
     { "nvim-tree/nvim-web-devicons", enabled = false, optional = true },
   },
