@@ -3,13 +3,19 @@ return {
   main = "nvim-treesitter.configs",
   event = { "BufReadPre", "BufNewFile" },
   build = ":TSUpdate",
+  init = function() 
+    vim.opt.foldmethod = "expr"
+    vim.opt.foldenable = false
+    vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+  end,
   opts = {
     ensure_installed = {
-      "bash", "comment", "css", "csv", "dockerfile",
-      "gitignore", "go", "gomod", "gosum", "gotmpl", "gowork",
-      "hcl", "helm", "html", "javascript", "jq", "json", "lua",
-      "markdown", "markdown_inline","nix", "sql", "starlark",
-      "terraform", "tmux", "toml", "typescript", "vim", "vimdoc", "yaml",
+      "bash", "comment", "css", "dockerfile", "gitignore",
+      "go", "gomod", "gosum", "gotmpl", "gowork",
+      "hcl", "helm", "html", "javascript", "jq", "json",
+      "lua", "markdown", "markdown_inline", "nix", "query",
+      "sql", "starlark", "terraform", "tmux", "toml",
+      "typescript", "vim", "vimdoc", "yaml",
     },
     highlight = {
       enable = true,
