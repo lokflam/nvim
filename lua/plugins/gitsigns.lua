@@ -6,10 +6,10 @@ return {
   },
   keys = {
     {
-      "]h",
+      "]c",
       function()
         if vim.wo.diff then
-          vim.cmd.normal({"]h", bang = true})
+          vim.cmd.normal({"]c", bang = true})
         else
           require("gitsigns").nav_hunk("next")
         end
@@ -17,10 +17,10 @@ return {
       desc = "Gitsigns: Next hunk"
     },
     {
-      "[h",
+      "[c",
       function()
         if vim.wo.diff then
-          vim.cmd.normal({"[h", bang = true})
+          vim.cmd.normal({"[c", bang = true})
         else
           require("gitsigns").nav_hunk("prev")
         end
