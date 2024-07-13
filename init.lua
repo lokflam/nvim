@@ -1,4 +1,6 @@
 require("options")
+require("keymaps")
+require("commands")
 
 -- Bootstrap lazy.nvim
 -- Ref: https://lazy.folke.io/installation
@@ -10,7 +12,4 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins")
-
-require("keymaps")
-require("commands")
 
