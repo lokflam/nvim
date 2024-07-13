@@ -8,8 +8,8 @@ return {
       "bash", "comment", "css", "csv", "dockerfile",
       "gitignore", "go", "gomod", "gosum", "gotmpl", "gowork",
       "hcl", "helm", "html", "javascript", "jq", "json", "lua",
-      "markdown", "markdown_inline", "nix", "query", "sql", "starlark",
-      "terraform", "tmux", "toml", "typescript", "yaml",
+      "markdown", "markdown_inline","nix", "sql", "starlark",
+      "terraform", "tmux", "toml", "typescript", "vim", "vimdoc", "yaml",
     },
     highlight = {
       enable = true,
