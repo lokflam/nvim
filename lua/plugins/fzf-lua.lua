@@ -5,13 +5,14 @@ return {
   init = function()
     require("fzf-lua").register_ui_select()
   end,
-  opts = {},
+  opts = {
+    fzf_colors = true,
+  },
   keys = {
-    { "<leader>ff", "<Cmd>FzfLua files<CR>",     desc = "Find files (Fzf)" },
-    { "<leader>fo", "<Cmd>FzfLua oldfiles<CR>",  desc = "Find old files (Fzf)" },
-    { "<leader>fb", "<Cmd>FzfLua buffers<CR>",   desc = "Find buffers (Fzf)" },
-    { "<leader>fk", "<Cmd>FzfLua keymaps<CR>",   desc = "Find keymaps (Fzf)" },
-    { "<leader>fs", "<Cmd>FzfLua live_grep<CR>", desc = "Find string by grep (Fzf)" },
-    { "<leader>fr", "<Cmd>FzfLua resume<CR>",    desc = "Resume find (Fzf)" },
+    { "<leader>ff", function() require("fzf-lua").files() end,          desc = "Find files (Fzf)" },
+    { "<leader>fb", function() require("fzf-lua").buffers() end,        desc = "Find buffers (Fzf)" },
+    { "<leader>fk", function() require("fzf-lua").keymaps() end,        desc = "Find keymaps (Fzf)" },
+    { "<leader>fg", function() require("fzf-lua").live_grep_glob() end, desc = "Find string by grep (Fzf)" },
+    { "<leader>fr", function() require("fzf-lua").resume() end,         desc = "Resume find (Fzf)" },
   },
 }
