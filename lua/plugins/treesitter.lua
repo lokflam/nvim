@@ -3,7 +3,7 @@ return {
   main = "nvim-treesitter.configs",
   event = { "BufReadPre", "BufNewFile" },
   build = ":TSUpdate",
-  init = function() 
+  init = function()
     vim.opt.foldmethod = "expr"
     vim.opt.foldenable = false
     vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"

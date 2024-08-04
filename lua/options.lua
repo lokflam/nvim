@@ -62,4 +62,3 @@ vim.opt.scrolloff = 10
 
 -- GUI colors
 vim.opt.termguicolors = true
-

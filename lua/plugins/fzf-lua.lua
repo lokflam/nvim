@@ -7,11 +7,11 @@ return {
   end,
   opts = {},
   keys = {
-    { "<leader>ff", "<Cmd>FzfLua files<CR>", desc = "Fzf: Find files" },
-    { "<leader>fo", "<Cmd>FzfLua oldfiles<CR>", desc = "Fzf: Find old (recent) files" },
-    { "<leader>fb", "<Cmd>FzfLua buffers<CR>", desc = "Fzf: Find buffers" },
-    { "<leader>fk", "<Cmd>FzfLua keymaps<CR>", desc = "Fzf: Find keymaps" },
-    { "<leader>fs", "<Cmd>FzfLua live_grep<CR>", desc = "Fzf: Find by grep" },
-    { "<leader>fr", "<Cmd>FzfLua resume<CR>", desc = "Fzf: Find resume" },
+    { "<leader>ff", "<Cmd>FzfLua files<CR>",     desc = "Find files (Fzf)" },
+    { "<leader>fo", "<Cmd>FzfLua oldfiles<CR>",  desc = "Find old files (Fzf)" },
+    { "<leader>fb", "<Cmd>FzfLua buffers<CR>",   desc = "Find buffers (Fzf)" },
+    { "<leader>fk", "<Cmd>FzfLua keymaps<CR>",   desc = "Find keymaps (Fzf)" },
+    { "<leader>fs", "<Cmd>FzfLua live_grep<CR>", desc = "Find string by grep (Fzf)" },
+    { "<leader>fr", "<Cmd>FzfLua resume<CR>",    desc = "Resume find (Fzf)" },
   },
 }

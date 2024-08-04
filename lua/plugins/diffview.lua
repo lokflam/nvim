@@ -3,8 +3,8 @@ return {
   event = "VeryLazy",
   opts = {},
   keys = {
-    { "<leader>dw", "<Cmd>DiffviewOpen<CR>", desc = "Diffview: Show worktree" },
-    { "<leader>dq", "<Cmd>DiffviewClose<CR>", desc = "Diffview: Close" },
-    { "<leader>dh", "<Cmd>DiffviewFileHistory %<CR>", desc = "Diffview: Show current file history" },
+    { "<leader>do", "<Cmd>DiffviewOpen<CR>",          desc = "Open worktree (Diffview)" },
+    { "<leader>dc", "<Cmd>DiffviewClose<CR>",         desc = "Close (Diffview)" },
+    { "<leader>dh", "<Cmd>DiffviewFileHistory %<CR>", desc = "Show current file history (Diffview)" },
   },
 }

@@ -6,12 +6,11 @@ return {
     delete_to_trash = true,
     skip_confirm_for_simple_edits = true,
     keymaps = {
-      ["<C-h>"] = false,
       ["gd"] = {
-        desc = "Oil: Toggle file detail view",
+        desc = "Oil: Toggle file DETAIL view",
         callback = function()
-          detail = not detail
-          if detail then
+          DETAIL = not DETAIL
+          if DETAIL then
             require("oil").set_columns({ "icon", "permissions", "size", "mtime" })
           else
             require("oil").set_columns({ "icon" })
@@ -21,6 +20,6 @@ return {
     },
   },
   keys = {
-    { "-", "<Cmd>Oil<CR>", desc = "Oil: Open parent directory" },
+    { "-", "<Cmd>Oil<CR>", desc = "Open parent directory (Oil)" },
   },
 }
