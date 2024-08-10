@@ -1,6 +1,5 @@
 return {
-	"lukas-reineke/indent-blankline.nvim",
+	"NMAC427/guess-indent.nvim",
 	event = { "BufReadPre", "BufNewFile" },
-	main = "ibl",
 	opts = {},
 }

@@ -45,12 +45,6 @@ vim.opt.smartcase = true
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
--- Sets how neovim will display certain whitespace characters in the editor.
---  See `:help "list"`
---  and `:help "listchars"`
-vim.opt.list = true
-vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
-
 -- Preview substitutions live, in a split preview window
 vim.opt.inccommand = "split"
 
@@ -62,3 +56,6 @@ vim.opt.scrolloff = 10
 
 -- GUI colors
 vim.opt.termguicolors = true
+
+-- Disable wrap
+vim.opt.wrap = false

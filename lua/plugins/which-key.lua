@@ -1,6 +1,6 @@
 return {
-  "folke/which-key.nvim",
-  dependencies = { "echasnovski/mini.icons" },
-  event = "VeryLazy",
-  opt = {},
+	"folke/which-key.nvim",
+	dependencies = { "echasnovski/mini.icons" },
+	event = "VeryLazy",
+	opt = {},
 }
