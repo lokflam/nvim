@@ -11,7 +11,11 @@ return {
 				auto_trigger = true,
 				debounce = 50,
 				keymap = {
-					accept_word = "<M-w>",
+					accept = "<leader>cl",
+					accept_word = "<leader>cw",
+					next = "<leader>c]",
+					prev = "<leader>c[",
+					dismiss = "<leader>ch",
 				},
 			},
 			filetypes = {
@@ -29,7 +33,7 @@ return {
 		},
 		opts = {},
 		keys = {
-			{ "<M-c>", "<Cmd>CopilotChatToggle<CR>", desc = "Toggle chat window (Copilot Chat)" },
+			{ "<leader>cc", "<Cmd>CopilotChatToggle<CR>", desc = "Toggle chat window (Copilot Chat)" },
 		},
 	},
 }

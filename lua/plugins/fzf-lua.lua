@@ -7,9 +7,6 @@ return {
 	end,
 	opts = {
 		fzf_colors = true,
-		files = {
-			formatter = "path.filename_first",
-		},
 		grep = {
 			multiline = 1,
 		},
