@@ -30,6 +30,9 @@ return {
 			-- formatter
 			"prettier",
 			"stylua",
+
+			-- linter
+			"eslint_d",
 		},
 	},
 }

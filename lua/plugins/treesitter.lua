@@ -1,5 +1,6 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
+	dependencies = { "nvim-treesitter/nvim-treesitter-textobjects" },
 	main = "nvim-treesitter.configs",
 	event = { "BufReadPre", "BufNewFile" },
 	build = ":TSUpdate",
@@ -54,6 +55,53 @@ return {
 				node_incremental = "<C-space>",
 				scope_incremental = false,
 				node_decremental = "<C-H>",
+			},
+		},
+		textobjects = {
+			select = {
+				enable = true,
+				lookahead = true,
+				keymaps = {
+					["af"] = "@function.outer",
+					["if"] = "@function.inner",
+					["ab"] = "@block.outer",
+					["ib"] = "@block.inner",
+					["ak"] = "@class.outer",
+					["ik"] = "@class.inner",
+					["ac"] = "@comment.outer",
+					["ic"] = "@comment.inner",
+					["ap"] = "@parameter.outer",
+					["ip"] = "@parameter.inner",
+				},
+			},
+			move = {
+				enable = true,
+				set_jump = true,
+				goto_next_start = {
+					["]f"] = "@function.outer",
+					["]<leader>"] = { query = "@scope", query_group = "locals", desc = "Next scope" },
+					["]z"] = { query = "@fold", query_group = "folds", desc = "Next fold" },
+				},
+				goto_next_end = {
+					["]F"] = "@function.outer",
+				},
+				goto_previous_start = {
+					["[f"] = "@function.outer",
+					["[<leader>"] = { query = "@scope", query_group = "locals", desc = "Next scope" },
+					["[z"] = { query = "@fold", query_group = "folds", desc = "Next fold" },
+				},
+				goto_previous_end = {
+					["[F"] = "@function.outer",
+				},
+			},
+			swap = {
+				enable = true,
+				swap_next = {
+					["<leader>a"] = "@parameter.inner",
+				},
+				swap_previous = {
+					["<leader>A"] = "@parameter.inner",
+				},
 			},
 		},
 	},

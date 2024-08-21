@@ -25,12 +25,15 @@ return {
 								runtime = {
 									version = "LuaJIT",
 								},
-								diagnostics = {
-									globals = { "vim" },
-								},
 								workspace = {
+									checkThirdParty = false,
 									library = {
+										"lua",
 										vim.env.VIMRUNTIME,
+										"nvim-test",
+										"${3rd}/busted/library",
+										"${3rd}/luassert/library",
+										"${3rd}/luv/library",
 									},
 								},
 							},

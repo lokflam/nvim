@@ -2,7 +2,6 @@
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlight" })
 
 vim.api.nvim_create_autocmd("LspAttach", {
-	desc = "LSP actions",
 	callback = function(event)
 		local opts = { buffer = event.buf }
 
@@ -14,13 +13,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		vim.keymap.set("n", "grs", "<cmd>lua vim.lsp.buf.signature_help()<cr>", opts)
 		vim.keymap.set("i", "<C-s>", "<cmd>lua vim.lsp.buf.signature_help()<cr>", opts)
 		vim.keymap.set("n", "grn", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
-		vim.keymap.set({ "n", "x" }, "grf", function()
-			require("conform").format({
-				lsp_fallback = true,
-				async = false,
-				timeout_ms = 1000,
-			})
-		end, { buffer = event.buf, desc = "Format buffer or range" })
 		vim.keymap.set("n", "gra", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
 	end,
 })
