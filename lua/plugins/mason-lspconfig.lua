@@ -40,6 +40,21 @@ return {
 						},
 					})
 				end,
+				["yamlls"] = function()
+					require("lspconfig").yamlls.setup({
+						capabilities = lsp_capabilities,
+						on_attach = function(client)
+							client.server_capabilities.documentFormattingProvider = true
+						end,
+						settings = {
+							yaml = {
+								schemaStore = {
+									enable = true,
+								},
+							},
+						},
+					})
+				end,
 			},
 		})
 	end,
