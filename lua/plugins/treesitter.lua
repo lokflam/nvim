@@ -27,6 +27,7 @@ return {
 			"javascript",
 			"jq",
 			"json",
+			"kdl",
 			"lua",
 			"markdown",
 			"markdown_inline",
